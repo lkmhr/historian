@@ -47,7 +47,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
 		
 		db.execSQL(createEventsDb);
 		db.execSQL(createFavsDb);
-		db.close();
 		
 	}
 
@@ -57,7 +56,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_FAVS);
 		 
         onCreate(db);
-        db.close();
 	}
 
 	public void insertTodaysEvents(List<HistoryEvent> events){
