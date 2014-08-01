@@ -1,7 +1,5 @@
-/*___Generated_by_IDEA___*/
-
 /** Automatically generated file. DO NOT MODIFY */
-package com.vjit.historian;
+package com.lkmhr.historian;
 
 public final class BuildConfig {
     public final static boolean DEBUG = true;

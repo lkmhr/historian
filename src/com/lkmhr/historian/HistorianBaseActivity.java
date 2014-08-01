@@ -11,11 +11,14 @@ public class HistorianBaseActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        getActionBar().hide();
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new SimpleFragmentPagerAdapter());
     }
+    
     public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
-        final int PAGE_COUNT = 4;
+        final int PAGE_COUNT = 5;
         public SimpleFragmentPagerAdapter() {
             super(getSupportFragmentManager());
         }
@@ -39,8 +42,11 @@ public class HistorianBaseActivity extends FragmentActivity {
 				case 3:
 					title = "Holidays";
 					break;
+				case 4:
+					title = "Starred";
+					break;
 				default:
-					
+					title = "Events";
 					break;
 			}
         	
@@ -48,12 +54,12 @@ public class HistorianBaseActivity extends FragmentActivity {
 		}
 		@Override
         public Fragment getItem(int position) {
-			
+			Fragment fragment;
 			Bundle bundle = new Bundle();
-			bundle.putInt("INDEX", position+1);
-			Fragment fragment = new EventsFragment();
+			bundle.putInt("INDEX", position);
+			fragment = new EventsFragment();
 			fragment.setArguments(bundle);
-			
+						
             return fragment;
         }
     }    
