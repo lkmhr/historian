@@ -1,5 +1,4 @@
 #historian
-An Android application that pulls "This Day in History" data from Wikipedia.
-* Supports Android 3.2 and above.
-* Further iterations of the app aim to go down to Android 2.3(API 9).
-* Lots of issues with tabs right now. A ViewPager will be added soon.
+An Android application that pulls "This Day in History" data from Wikipedia. Supports API 11 and above.
+
+Forked from [Historian](https://github.com/vjit/historian)
